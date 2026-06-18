@@ -1,0 +1,323 @@
+/* ================= LUXURY THEME VARIABLES ================= */
+:root {
+    --primary-gold: #c5a059;
+    --dark-charcoal: #2c2c2c;
+    --soft-rose: #f8ecea;
+    --accent-pink: #d48166;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    background: #fdfdfd;
+    color: var(--dark-charcoal);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* ================= HEADER ================= */
+.top-header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.top-header h1 {
+    color: var(--dark-charcoal);
+    font-size: 36px;
+}
+
+.top-header h1 span {
+    color: var(--primary-gold);
+    font-weight: 300;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--primary-gold); }
+
+/* ================= HERO ================= */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 60px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: var(--primary-gold);
+    color: white;
+    padding: 15px 80px;
+    text-decoration: none;
+    border-radius: 0; /* Modern square edges */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.4s;
+    display: inline-block;
+}
+
+.btn:hover { background: var(--dark-charcoal); transform: scale(1.05); }
+
+/* ================= SERVICES ================= */
+.section { padding: 100px 10%; text-align: center; }
+.subtitle { color: var(--primary-gold); text-transform: uppercase; letter-spacing: 3px; font-size: 20px; margin-bottom: 10px; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    padding: 50px 30px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    transition: 0.4s;
+}
+
+.service-card i { font-size: 35px; color: var(--primary-gold); margin-bottom: 20px; }
+.service-card h3 { font-size: 20px; margin-bottom: 10px; }
+.service-card p { color: var(--primary-gold); font-weight: 600; }
+
+.service-card:hover {
+    background: var(--dark-charcoal);
+    color: white;
+    transform: translateY(-10px);
+}
+
+/* ================= GALLERY ================= */
+.light-bg { background: var(--soft-rose); }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%; height: 300px; object-fit: cover;
+    filter: grayscale(20%);
+    transition: 0.5s;
+}
+
+.gallery-grid img:hover { filter: grayscale(0%); }
+
+/* ================= APPOINTMENT ================= */
+.appointment { background: white; padding: 100px 26px; text-align: center; border-top: 1px solid #eee; }
+.whatsapp-btn { background: #25D366; }
+
+/* ================= FOOTER ================= */
+footer { background: var(--dark-charcoal); color: #888; padding: 50px; text-align: center; font-size: 13px; }
+footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
+
+/* ================= FLOATS ================= */
+.float {
+    position: fixed; width: 55px; height: 55px; bottom: 30px;
+    border-radius: 50px; color: white; display: flex; align-items: center; justify-content: center;
+    font-size: 24px; text-decoration: none; z-index: 1000; transition: 0.3s;
+}
+.whatsapp { background: #25D366; right: 30px; }
+.email { background: var(--primary-gold); right: 95px; }
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .top-header { flex-direction: column; gap: 15px; }
+    nav a { margin: 0 8px; font-size: 17px; }
+}
+
+/* Add to your existing variables */
+.active {
+    color: var(--gold) !important;
+    border-bottom: 2px solid var(--gold);
+}
+
+/* About Hero */
+.about-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Rounded Card Logic */
+.rounded-card {
+    border-radius: 25px; /* Adjust this for the "Card View" rounded look */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Layout for About Text & Image */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text { flex: 1; }
+.about-image-box { flex: 1; }
+
+.about-text .tag {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    margin: 10px 0 20px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Statistics */
+.stats-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item h4 {
+    font-size: 28px;
+    color: var(--gold);
+}
+
+.stat-item p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Values Section */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.value-card i {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.value-card h4 {
+    margin-bottom: 15px;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+/* Mobile Responsive for About Us */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-grid {
+        justify-content: center;
+    }
+}
+
+/* AdSense Privacy Layout */
+.privacy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px;
+    text-align: left;
+    border: 1px solid #f0f0f0;
+}
+
+.policy-item h3 {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f8f8f8;
+    padding-bottom: 10px;
+}
+
+.policy-item p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.policy-item a {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .privacy-container {
+        padding: 30px 20px;
+    }
+}
+/* Instagram Icon Color and Position */
+.instagram { 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2397 75%, #bc1888 100%); 
+    right: 170px; /* This places it to the left of the Email icon */
+}
